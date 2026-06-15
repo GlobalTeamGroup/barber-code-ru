@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>BARBER CODE — Премиум Барбершоп в Москве</title>
+  <meta name="description" content="BARBER CODE — премиум барбершоп в Москве. Классические стрижки, горячее бритьё, оформление бороды. Запись онлайн. Кутузовский пр., 34." />
+  <meta name="keywords" content="барбершоп Москва, стрижка мужская, горячее бритьё, оформление бороды, фейд, андеркат, BARBER CODE" />
+  <meta property="og:title" content="BARBER CODE — Премиум Барбершоп" />
+  <meta property="og:description" content="Классические стрижки, горячее бритьё, уходовые процедуры. Только для настоящих. Москва, Кутузовский пр., 34." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://barbercode.ru" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="gl-canvas"></canvas>
+  <div class="grain-overlay"></div>
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">BARBER CODE</div>
+      <div class="loader-bar-wrap"><div id="progress-bar"></div></div>
+      <div class="loader-sub">Загрузка опыта...</div>
+    </div>
+  </div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">
+        <span class="nav-brand-icon">✦</span>
+        <span class="nav-brand-text">BARBER CODE</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#portfolio" class="nav-link">Работы</a>
+        <a href="#process" class="nav-link">Процесс</a>
+        <a href="#about" class="nav-link">О нас</a>
+        <a href="#contact" class="nav-link">Контакты</a>
+      </div>
+      <a href="#contact" class="nav-cta">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+    <button class="drawer-close" id="drawer-close" aria-label="Закрыть меню">✕</button>
+    <div class="drawer-brand">BARBER CODE</div>
+    <nav class="drawer-links">
+      <a href="#services" class="drawer-link">Услуги</a>
+      <a href="#portfolio" class="drawer-link">Наши работы</a>
+      <a href="#process" class="drawer-link">Процесс</a>
+      <a href="#about" class="drawer-link">О нас</a>
+      <a href="#contact" class="drawer-link">Контакты</a>
+    </nav>
+    <a href="#contact" class="drawer-cta">Записаться</a>
+    <div class="drawer-tagline">Твой стиль — твоё главное оружие</div>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- SECTION 0: HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="hero-content">
+          <div class="hero-tag reveal-3d">
+            <span class="hero-tag-line"></span>
+            <span>Премиум Барбершоп · Москва</span>
+            <span class="hero-tag-line"></span>
+          </div>
+          <h1 class="hero-title reveal-3d">
+            <span class="accent">BARBER</span>
+            <span class="hero-title-code">CODE</span>
+          </h1>
+          <p class="hero-subtitle reveal-3d">Искусство быть мужчиной</p>
+          <p class="hero-desc reveal-3d">
+            Классические стрижки, горячее бритьё, уходовые процедуры.<br class="br-desktop">
+            Только для настоящих.
+          </p>
+          <div class="hero-actions reveal-3d">
+            <a href="#contact" class="btn btn-primary">Записаться</a>
+            <a href="#portfolio" class="btn btn-outline">Наши работы</a>
+          </div>
+          <p class="hero-subtagline reveal-3d">Твой стиль — твоё главное оружие</p>
+        </div>
+        <div class="hero-scroll-hint">
+          <span class="scroll-hint-text">Листай вниз</span>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </section>
+
+      <!-- SECTION 1: УСЛУГИ -->
+      <section class="page" data-index="1" id="services">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <div class="section-eyebrow">Что мы делаем</div>
+            <h2 class="section-title">УСЛУГИ</h2>
+            <p class="section-subtitle">Всё для настоящего мужчины</p>
+          </div>
+          <div class="cards-grid cards-4 reveal-3d">
+            <div class="card service-card">
+              <div class="card-top-line"></div>
+              <div class="card-icon">✂️</div>
+              <h3 class="card-title">Стрижка и укладка</h3>
+              <p class="card-desc">Классика, фейд, андеркат — любая сложность</p>
+              <div class="card-price">от 2 500 ₽</div>
+            </div>
+            <div class="card service-card">
+              <div class="card-top-line"></div>
+              <div class="card-icon">🪒</div>
+              <h3 class="card-title">Горячее бритьё</h3>
+              <p class="card-desc">Прямая бритва, горячее полотенце, масла</p>
+              <div class="card-price">от 1 800 ₽</div>
+            </div>
+            <div class="card service-card">
+              <div class="card-top-line"></div>
+              <div class="card-icon">🧔</div>
+              <h3 class="card-title">Оформление бороды</h3>
+              <p class="card-desc">Моделирование, стрижка, уходовые средства</p>
+              <div class="card-price">от 1 200 ₽</div>
+            </div>
+            <div class="card service-card">
+              <div class="card-top-line"></div>
+              <div class="card-icon">💆</div>
+              <h3 class="card-title">Уходовые процедуры</h3>
+              <p class="card-desc">Маски, скрабы, питание для кожи и бороды</p>
+              <div class="card-price">от 1 500 ₽</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: ПОРТФОЛИО -->
+      <section class="page" data-index="2" id="portfolio">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <div class="section-eyebrow">Наше мастерство</div>
+            <h2 class="section-title">НАШИ РАБОТЫ</h2>
+            <p class="section-subtitle">Избранные примеры</p>
+          </div>
+          <div class="cards-grid cards-4 reveal-3d">
+            <div class="card portfolio-card">
+              <div class="card-top-line"></div>
+              <div class="portfolio-visual"><div class="portfolio-glyph">◈</div><div class="portfolio-num">01</div></div>
+              <div class="portfolio-info">
+                <h3 class="card-title">Skin fade + beard</h3>
+                <p class="card-desc">Классический фейд с бородой</p>
+                <div class="portfolio-tag">Фейд · Борода</div>
+              </div>
+            </div>
+            <div class="card portfolio-card">
+              <div class="card-top-line"></div>
+              <div class="portfolio-visual"><div class="portfolio-glyph">◈</div><div class="portfolio-num">02</div></div>
+              <div class="portfolio-info">
+                <h3 class="card-title">Textured crop</h3>
+                <p class="card-desc">Текстурная стрижка для густых волос</p>
+                <div class="portfolio-tag">Крой · Текстура</div>
+              </div>
+            </div>
+            <div class="card portfolio-card">
+              <div class="card-top-line"></div>
+              <div class="portfolio-visual"><div class="portfolio-glyph">◈</div><div class="portfolio-num">03</div></div>
+              <div class="portfolio-info">
+                <h3 class="card-title">Classic slick back</h3>
+                <p class="card-desc">Безупречный слик-бэк с горячим бритьём</p>
+                <div class="portfolio-tag">Классика · Бритьё</div>
+              </div>
+            </div>
+            <div class="card portfolio-card">
+              <div class="card-top-line"></div>
+              <div class="portfolio-visual"><div class="portfolio-glyph">◈</div><div class="portfolio-num">04</div></div>
+              <div class="portfolio-info">
+                <h3 class="card-title">Mid fade</h3>
+                <p class="card-desc">Средний фейд с оформлением линии</p>
+                <div class="portfolio-tag">Фейд · Линия</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: ПРОЦЕСС -->
+      <section class="page" data-index="3" id="process">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <div class="section-eyebrow">Наш подход</div>
+            <h2 class="section-title">КАК ЭТО ПРОИСХОДИТ</h2>
+          </div>
+          <div class="process-steps reveal-3d">
+            <div class="process-step card">
+              <div class="card-top-line"></div>
+              <div class="step-number">01</div>
+              <div class="step-icon">📅</div>
+              <h3 class="step-title">Запись</h3>
+              <p class="step-desc">Онлайн или по телефону, точное время</p>
+            </div>
+            <div class="process-connector"><div class="connector-arrow">→</div></div>
+            <div class="process-step card">
+              <div class="card-top-line"></div>
+              <div class="step-number">02</div>
+              <div class="step-icon">☕</div>
+              <h3 class="step-title">Приём</h3>
+              <p class="step-desc">Напиток на выбор, знакомство с барбером</p>
+            </div>
+            <div class="process-connector"><div class="connector-arrow">→</div></div>
+            <div class="process-step card">
+              <div class="card-top-line"></div>
+              <div class="step-number">03</div>
+              <div class="step-icon">✂️</div>
+              <h3 class="step-title">Работа</h3>
+              <p class="step-desc">Стрижка с обсуждением и консультацией</p>
+            </div>
+            <div class="process-connector"><div class="connector-arrow">→</div></div>
+            <div class="process-step card">
+              <div class="card-top-line"></div>
+              <div class="step-number">04</div>
+              <div class="step-icon">💫</div>
+              <h3 class="step-title">Финиш</h3>
+              <p class="step-desc">Укладка, фото, рекомендации по уходу</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: О НАС -->
+      <section class="page" data-index="4" id="about">
+        <div class="section-content">
+          <div class="about-layout reveal-3d">
+            <div class="about-text">
+              <div class="section-eyebrow">Наша история</div>
+              <h2 class="section-title about-title">О <span class="accent">BARBER CODE</span></h2>
+              <p class="about-subtitle">Премиум-барбершоп с 2018 года</p>
+              <p class="about-desc">BARBER CODE — это не просто стрижка. Это ритуал. Мы создаём атмосферу, где каждый мужчина чувствует себя королём.</p>
+              <div class="about-facts">
+                <div class="fact"><div class="fact-number">6</div><div class="fact-label">лет работы</div></div>
+                <div class="fact"><div class="fact-number">12K+</div><div class="fact-label">клиентов</div></div>
+                <div class="fact"><div class="fact-number">5</div><div class="fact-label">барберов</div></div>
+                <div class="fact"><div class="fact-number">★★★★★</div><div class="fact-label">рейтинг</div></div>
+              </div>
+              <p class="about-london">Мастера с опытом из <span class="accent">Лондона</span></p>
+              <a href="#contact" class="btn btn-primary">Записаться к мастеру</a>
+            </div>
+            <div class="about-emblem">
+              <div class="emblem-ring">
+                <div class="emblem-inner">
+                  <div class="emblem-mark">B</div>
+                  <div class="emblem-word">BARBER</div>
+                  <div class="emblem-sep">—</div>
+                  <div class="emblem-word">CODE</div>
+                  <div class="emblem-year">2018</div>
+                </div>
+              </div>
+              <div class="emblem-glow"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: КОНТАКТЫ -->
+      <section class="page" data-index="5" id="contact">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <div class="section-eyebrow">Свяжитесь с нами</div>
+            <h2 class="section-title">ЗАПИСАТЬСЯ</h2>
+            <p class="section-subtitle">Места ограничены — бронируй заранее</p>
+          </div>
+          <div class="contact-grid reveal-3d">
+            <div class="contact-info">
+              <div class="contact-item card">
+                <div class="card-top-line"></div>
+                <div class="contact-icon">📞</div>
+                <div class="contact-detail">
+                  <div class="contact-label">Телефон</div>
+                  <a href="tel:+74954567890" class="contact-value">+7 (495) 456-78-90</a>
+                </div>
+              </div>
+              <div class="contact-item card">
+                <div class="card-top-line"></div>
+                <div class="contact-icon">✉️</div>
+                <div class="contact-detail">
+                  <div class="contact-label">Email</div>
+                  <a href="mailto:book@barbercode.ru" class="contact-value">book@barbercode.ru</a>
+                </div>
+              </div>
+              <div class="contact-item card">
+                <div class="card-top-line"></div>
+                <div class="contact-icon">📍</div>
+                <div class="contact-detail">
+                  <div class="contact-label">Адрес</div>
+                  <span class="contact-value">Москва, Кутузовский пр., 34</span>
+                </div>
+              </div>
+              <div class="contact-item card">
+                <div class="card-top-line"></div>
+                <div class="contact-icon">🕙</div>
+                <div class="contact-detail">
+                  <div class="contact-label">Время работы</div>
+                  <span class="contact-value">Ежедневно: 10:00–22:00</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-cta-block card">
+              <div class="card-top-line"></div>
+              <div class="cta-ornament">✦</div>
+              <h3 class="cta-title">Готов стать лучшей версией себя?</h3>
+              <p class="cta-desc">Забронируй место у лучших барберов Москвы</p>
+              <div class="cta-actions">
+                <a href="tel:+74954567890" class="btn btn-primary btn-large">Позвонить сейчас</a>
+                <a href="mailto:book@barbercode.ru" class="btn btn-outline">Написать письмо</a>
+              </div>
+              <div class="cta-divider"><span>или следи за нами</span></div>
+              <div class="social-links">
+                <a href="#" class="social-icon" aria-label="Telegram">TG</a>
+                <a href="#" class="social-icon" aria-label="ВКонтакте">VK</a>
+                <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+              </div>
+            </div>
+          </div>
+          <footer class="contact-footer reveal-3d">
+            <div class="footer-brand">BARBER CODE</div>
+            <p class="footer-tagline">Твой стиль — твоё главное оружие</p>
+            <p class="footer-copy">© 2024 BARBER CODE. Премиум Барбершоп. Москва.</p>
+          </footer>
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
