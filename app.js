@@ -1,11 +1,11 @@
 ﻿/* ============================================================
-   BARBER CODE â€” app.js
-   Cinematic Scroll Engine Â· Russian Version
+   BARBER CODE — app.js
+   Cinematic Scroll Engine · Russian Version
    ============================================================ */
 
 // === CONSTANTS ===
 // TOTAL_FRAMES: update after ffmpeg frame extraction
-// Formula: total_seconds Ã— fps (e.g. 6 clips Ã— ~13sec Ã— 10fps â‰ˆ 800)
+// Formula: total_seconds × fps (e.g. 6 clips × ~13sec × 10fps ≈ 800)
 const TOTAL_FRAMES = 429;     // barber-code-ru frames
 const PAGE_COUNT   = 6;
 const LERP         = 0.02;   // Cinematic slow lerp
@@ -98,8 +98,8 @@ function drawFrame(idx) {
   const img = frames[Math.max(0, Math.min(Math.round(idx), TOTAL_FRAMES - 1))];
   if (!img || !img.complete || !img.naturalWidth) return;
 
-  // Use innerWidth/innerHeight â€” ctx.setTransform already handles DPR scaling
-  // DO NOT divide canvas.width by devicePixelRatio â€” use module-level canvasDpr
+  // Use innerWidth/innerHeight — ctx.setTransform already handles DPR scaling
+  // DO NOT divide canvas.width by devicePixelRatio — use module-level canvasDpr
   const W = innerWidth;
   const H = innerHeight;
 
